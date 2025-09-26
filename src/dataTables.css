@@ -1,0 +1,189 @@
+/* Wrapper & Layout */
+.dt-layout-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.dt-layout-table {
+    display: block !important;
+    margin: 30px 0;
+}
+
+.table-responsive {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 25px 15px;
+    background-color: #fff;
+    overflow-x: auto;
+}
+
+/* Inputs & Search */
+.dt-input {
+    border: 1px solid #d1d1d1;
+    height: 36px;
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.dt-input:focus {
+    border-color: #9D1404;
+    box-shadow: 0 0 0 2px rgba(34, 218, 196, 0.25);
+}
+
+/* Show search label next to input */
+.dt-search {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* space between label and input */
+}
+
+.dt-search label {
+    display: inline-block; 
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.dt-layout-cell .dt-search .dt-input {
+    width: auto; 
+    flex: 1;
+}
+
+
+.dt-layout-cell .dt-search .dt-input {
+    width: 100%;
+}
+
+/* Table Head & Body */
+.dataTable thead th {
+    padding: 18px 12px;
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: 2px solid rgba(168, 168, 168, 0.3);
+    color: #252525;
+    text-align: left;
+}
+
+.dataTable tbody td {
+    padding: 14px 12px;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(216, 216, 216, 0.3);
+    vertical-align: middle;
+}
+
+.dataTable tbody tr:hover {
+    cursor: pointer;
+    background-color: rgba(34, 218, 196, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+.dt-empty {
+    text-align: center;
+    font-style: italic;
+    color: #999;
+}
+
+/* Pagination */
+/* Pagination Container */
+.dt-paging {
+    display: flex;
+    gap: 12px; /* Increased gap between buttons */
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Pagination Buttons */
+.dt-paging-button {
+    display: inline-block; /* make sure buttons are inline-block */
+    margin: 0 4px;         /* horizontal gap between buttons */
+    padding: 6px 14px;
+    background-color: #f7f7f7;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #333;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.dt-paging-button.current {
+    background-color: #9D1404;
+    color: #fff;
+    border: none;
+}
+
+.dt-paging-button:hover:not(.current) {
+    background-color: #9D1404;
+    color: #fff;
+}
+
+.dt-paging-button.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Previous/Next Buttons */
+.dt-paging-button.previous::before,
+.dt-paging-button.next::before {
+    content: '';
+}
+
+.dt-paging-button.previous:hover::before,
+.dt-paging-button.next:hover::before {
+    content: none;
+}
+
+/* Length & Info */
+.dt-length label {
+    font-size: 14px;
+    color: #333;
+}
+
+.dt-info {
+    font-size: 14px;
+    color: #555;
+}
+
+/* CKEditor Styling */
+.ck-editor__editable {
+    min-height: 180px;
+    border-radius: 6px;
+    border: 1px solid #d1d1d1;
+    padding: 10px;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ck.ck-editor__editable.ck-focused:not(.ck-editor__nested-editable) {
+    border-color: #9D1404 !important;
+    box-shadow: 0 0 0 2px rgba(34, 218, 196, 0.25) !important;
+}
+
+.ck-content ul {
+    list-style-type: disc;
+    padding-left: 1.5em;
+}
+
+.ck-content ol {
+    list-style-type: decimal;
+    padding-left: 1.5em;
+}
+
+.ck-content li {
+    margin-bottom: 0.5em;
+}
+
+/* Custom Select (if using react-select) */
+.css-t3ipsp-control {
+    border-color: #9D1404 !important;
+    box-shadow: 0 0 0 1px rgba(34, 218, 196, 0.25) !important;
+}
